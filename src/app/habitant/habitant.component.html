@@ -1,0 +1,72 @@
+<div class="conatiner">
+  <div class="d-flex justify-content-center m-4">
+      <h1>List Habitant</h1>
+  </div>    
+  <div class="m-5">
+      <!-- <mat-form-field>
+          <mat-label>Chercher</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="habitant" #input>
+        </mat-form-field> -->
+        
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        
+         
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+        
+      
+          <ng-container matColumnDef="cin">
+            <th mat-header-cell *matHeaderCellDef>Cin </th>
+            <td mat-cell *matCellDef="let element"><mat-icon>profil picture</mat-icon>  {{element.cin}} </td>
+          </ng-container>
+     
+          <ng-container matColumnDef="nom">
+            <th mat-header-cell *matHeaderCellDef> Nom </th>
+            <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
+          </ng-container>
+        
+        
+          <ng-container matColumnDef="prenom">
+            <th mat-header-cell *matHeaderCellDef> Prénom </th>
+            <td mat-cell *matCellDef="let element"> {{element.prenom}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="tel">
+            <th mat-header-cell *matHeaderCellDef> tel </th>
+            <td mat-cell *matCellDef="let element"> {{element.tel}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="residence">
+              <th mat-header-cell *matHeaderCellDef> Résidence </th>
+              <td mat-cell *matCellDef="let element"> {{element.residence}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="copropriete">
+              <th mat-header-cell *matHeaderCellDef> copropriete </th>
+              <td mat-cell *matCellDef="let element"> {{element.copropriete}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="appartement">
+              <th mat-header-cell *matHeaderCellDef> appartement </th>
+              <td mat-cell *matCellDef="let element"> {{element.appartement}} </td>
+            </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="tabs"></tr>
+          <tr mat-row *matRowDef="let row; columns: tabs"></tr>
+        
+          
+          <!-- <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">Not exist "{{input.value}}"</td>
+          </tr> -->
+        </table>
+  </div>
+
+  <mat-slider color="primary"></mat-slider>
+
+  <ul>
+    <li *ngFor="let h of lesHabitant" >{{h.cin}}</li>
+  </ul>
+  
+  

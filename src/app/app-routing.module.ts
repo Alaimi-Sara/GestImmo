@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HelloComponent } from './hello/hello.component';
+import { HabitantComponent } from './habitant/habitant.component';
+import { HomeComponent } from './home/home.component';
+
 
 const routes: Routes = [
-  {path:'hello', component:HelloComponent}
+  { path: 'habitant', title: 'list habitant', component: HabitantComponent },
+  { path: 'home', title: 'Accueil', component: HomeComponent }
 ];
 
 @NgModule({

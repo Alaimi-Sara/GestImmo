@@ -1,0 +1,20 @@
+<!-- first step creation header -->
+<header >
+    <mat-toolbar>
+        <span  class="logo">
+            <img src="../../../assets/logo.png" alt="chef">
+            <span class="nameLogo" class="text-primary">GestImmo</span>
+        </span>   
+        <span class="spacer"></span>
+            <a mat-button  routerLink="/home"><mat-icon>home</mat-icon></a>
+            <a mat-button routerLink="/habitant">Consulter</a>
+            <a mat-button >About us</a>
+            <a mat-button >Contact</a>
+            <!-- <a mat-button routerLink="/cartItem">
+                <i style="font-size:25px;" class="bi bi-basket"></i>
+                <div style="font-size:10px;" class="badge text-bg-primary rounded-pill translate-middle">{{badge}}</div>
+            </a> -->
+            <!-- <button *ngIf="!isConnected" mat-raised-button color="warn" routerLink="/login">login</button>
+            <button *ngIf="isConnected" mat-raised-button color="warn" (click)="logout()">logout</button> -->
+    </mat-toolbar>
+</header>

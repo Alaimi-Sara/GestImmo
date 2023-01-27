@@ -1,0 +1,44 @@
+img {
+    width: 60px;
+    height: 60px;
+}
+
+.logo {
+    font-size: 120%;
+    align-items: flex-start;
+    display: flex;
+    align-items: center;
+    font-family:  'Nunito';
+    font-weight: bold;
+    /* font-style: italic; */
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    
+}
+
+
+.nameLogo{
+    font-family: 'Nunito';
+    font-weight: bold;
+    color:black;
+    font-size: 50px;
+}
+a{
+    text-decoration: none;
+    font-size: 80%;
+    white-space: normal;
+    color: black;
+}
+a:hover{
+    color: black;
+    border-radius: 20px;
+    background-color:aliceblue;
+}
+
+.spacer {
+    flex: 1 1 auto;
+  }
+
+button {
+    border-radius: 20px;
+    margin: 40px;   
+}

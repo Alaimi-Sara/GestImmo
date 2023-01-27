@@ -1,3 +1,9 @@
 export class Habitant {
-    constructor( public cin:number, public nom:string, public prenom:number){}
+    constructor( public cin:number,
+         public nom:string,
+          public prenom:string,
+          public tel:number,
+          public residence:string,
+          public copropriete:string,
+          public appartement :string){}
 }
