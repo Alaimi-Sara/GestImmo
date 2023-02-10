@@ -1,18 +1,17 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Habitant } from '../classes/habitant';
 
-  const URL="http://localhost:3000/habitant"
+const URL="http://localhost:3000/habitant";
 @Injectable({
   providedIn: 'root'
 })
 export class HabitantService {
 
-  
   constructor(private http:HttpClient) { }
-  getHabitants():Observable<Habitant[]>{
-    return this.http.get<Habitant[]>(URL);
+  getHabitants():Observable<any>{
+    return this.http.get<any>(URL);
   }
   getHabitantsById(id:string){
     const res = this.http.get(`${URL}/${id}`);
@@ -27,6 +26,4 @@ export class HabitantService {
   deleteHabitants(id : number){
     return this.http.delete(`${URL}/${id}`);
   }
-
 }
-

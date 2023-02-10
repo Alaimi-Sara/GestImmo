@@ -1,0 +1,17 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav opened="true" mode="side" style="width: 100%">
+
+        <mat-nav-list>
+            <span> <a mat-button routerLink="/habitant">listhabitant</a></span>
+           <span> <a mat-button routerLink="/listPaiement"> listPaiement</a></span>
+           <span> <a mat-button routerLink="/listDepenses">listDepense</a></span>
+           <span> <a mat-button routerLink="/setting">Paramètre du compte</a></span>
+            <div>
+                <a mat-list-item (click)="logout()"><span><i class="bi bi-box-arrow-right"></i> Déconnexion</span></a>
+            </div>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

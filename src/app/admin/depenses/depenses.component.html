@@ -1,0 +1,25 @@
+<h1 mat-dialog-title class="d-flex justify-content-center m-4">Ajouter Depenses</h1>
+<div mat-card-content>
+    <div class="cardForm">
+        <form [formGroup]="cardForm">
+           
+
+            <mat-form-field appearance="outline">
+                <mat-label>Type</mat-label>
+                <input matInput placeholder="Type"  formControlName="type">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Montant</mat-label>
+                <input matInput placeholder="Montant"  formControlName="montant">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+
+            <mat-dialog-actions align="end" class="d-flex justify-content-around">
+                <button  mat-dialog-close class="btn btn-warning rounded-pill">Annuler</button>
+                <button  [mat-dialog-close]="true" cdkFocusInitial class="btn btn-primary rounded-pill" (click)="actionBtn === 'Modifier' ? updateProduct() : onAddProduct()">{{actionBtn}}</button>
+            </mat-dialog-actions>
+        </form>
+    </div>
+</div>

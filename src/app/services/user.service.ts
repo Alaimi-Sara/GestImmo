@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../classes/user';
 
-
 const URL="http://localhost:3000/user"
 @Injectable({
   providedIn: 'root'
@@ -11,8 +10,8 @@ const URL="http://localhost:3000/user"
 export class UserService {
 
   constructor(private http : HttpClient) { }
-  getUsers():Observable<User[]>{
-    return this.http.get<User[]>(URL);
+  getUsers():Observable<any>{
+    return this.http.get<any>(URL);
   }
 
   addUsers(u : User):Observable<User>{
@@ -23,5 +22,6 @@ export class UserService {
   }
   
   role : string = "habitant";
-  user: User | undefined;
+  user: User |undefined;
+ 
 }

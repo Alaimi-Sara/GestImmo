@@ -1,0 +1,42 @@
+<div mat-card-content>
+    <div class="d-flex justify-content-center m-4">
+        <h1>Ajouter paiement</h1>
+    </div>
+    <div class="HabitantForm">
+        <form [formGroup]="HabitantForm">
+
+            <mat-form-field appearance="outline">
+                <mat-label>Nom</mat-label>
+                <input matInput placeholder="Nom Habitant" formControlName="nom">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>prenom</mat-label>
+                <input matInput placeholder="Prenom Habitant" formControlName="prenom">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+            
+
+            <mat-form-field appearance="outline">
+                <mat-label>Montant</mat-label>
+                <input matInput placeholder="Montant" formControlName="montant">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Choisir date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="date">
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-dialog-actions align="end" class="d-flex justify-content-around">
+                <button mat-dialog-close class="btn btn-warning rounded-pill">Annuler</button>
+                <button [mat-dialog-close]="true" cdkFocusInitial class="btn btn-primary rounded-pill"
+                    (click)="actionBtn === 'Ajouter' ? onAddProduct() : onAddProduct()">{{actionBtn}}</button>
+            </mat-dialog-actions>
+        </form>
+    </div>
+</div>

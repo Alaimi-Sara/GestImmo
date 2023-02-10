@@ -1,0 +1,32 @@
+<!-- first step creation header -->
+<header >
+    <mat-toolbar>
+        <span  class="logo">
+            <img src="../../../assets/logo.png" alt="chef">
+            <span class="nameLogo" class="text-primary">GestImmo</span>
+        </span>   
+        <span class="spacer"></span>
+            <a mat-button  routerLink="/home"><mat-icon>home</mat-icon></a>
+            <a mat-button routerLink="/habitant">listhabitant</a>
+            <a mat-button routerLink="/listPaiement"> listPaiement</a>
+            <a mat-button routerLink="/listDepenses">listDepense</a>
+            <a mat-button routerLink="/consulter">consulter</a>
+            <a mat-button routerLink="/admin">admin</a>
+            <button class="btn btn-light rounded-pill mx-3"  (click)="openForm()">
+                <i class="bi bi-plus-circle"></i> Ajouter 
+            </button>
+            <button class="btn btn-light rounded-pill mx-3"  (click)="openForm1()">
+                <i class="bi bi-plus-circle"></i> Ajouter dep
+            </button>
+            
+            <button *ngIf="!isConnected" mat-raised-button color="primary" routerLink="/login">login</button>
+           
+            <!-- <a mat-button routerLink="/cartItem">
+                <i style="font-size:25px;" class="bi bi-basket"></i>
+                <div style="font-size:10px;" class="badge text-bg-primary rounded-pill translate-middle">{{badge}}</div>
+            </a> -->
+            <!-- <button *ngIf="!isConnected" mat-raised-button color="warn" routerLink="/login">login</button>
+            <button *ngIf="isConnected" mat-raised-button color="warn" (click)="logout()">logout</button> -->
+    </mat-toolbar>
+</header>
+

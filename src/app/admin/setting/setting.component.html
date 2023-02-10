@@ -1,0 +1,43 @@
+<div class="conatiner">
+    <div class="d-flex justify-content-center m-4">
+        <h1>Public Profil & Account Setting</h1>
+    </div>    
+    <div class="box m-4 justify-content-center">
+       
+            <div class="profil d-flex justify-content-start align-items-center mb-5">
+              
+              <div class="form">
+                <mat-card class="form p-5 m-6" style="width: 500px; border-radius: 20px;">
+                  <mat-card-header>
+                    <mat-card-title>Public Profil</mat-card-title>
+                    <mat-card-subtitle>Info</mat-card-subtitle>
+                  </mat-card-header>
+                 
+                  <mat-card-content>
+                              <form [formGroup]="settingForm" (ngSubmit)="onUpdate()">
+                                  
+                                  <div>
+                                      <label>Mail</label>
+                                      <input  class="setting-form-txt" placeholder="mail" formControlName="email" >
+                                  </div>
+                                  <div class="input-container">
+                                      <label>Mot de passe</label>
+                                      <input [type]="hide ? 'password' : 'text'"  class="setting-form-txt" placeholder="mot de passe" formControlName="password" >
+                                      <span class="eyeIcon" (click)="hide = !hide">
+                                        <i [ngClass]="hide?'bi bi-eye-slash-fill':'bi bi-eye-fill'"></i>
+                                      </span>
+                                  </div>
+                                  <mat-card-actions class="d-flex justify-content-center align-items-center">
+                                    <button mat-raised-button color="primary" class="button" [disabled]="settingForm.invalid">Continue</button>
+                                  </mat-card-actions>
+                              </form>
+                  </mat-card-content>
+                  
+              </mat-card>
+              
+            </div>  
+        </div>
+    </div>
+</div>
+
+

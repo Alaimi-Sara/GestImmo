@@ -1,5 +1,7 @@
 export class Habitant {
-    constructor( public cin:number,
+    constructor( 
+        public id:number,
+        public cin:number,
          public nom:string,
           public prenom:string,
           public tel:number,

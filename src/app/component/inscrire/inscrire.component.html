@@ -1,0 +1,100 @@
+<div class="container">
+    <!-- <div class="d-flex justify-content-center m-5">
+        <h3><strong>Login</strong></h3>
+    </div> -->
+    <div class="d-flex justify-content-center align-items-center ">
+        <div class="box">
+            <div class="login-left">
+                
+                <mat-card class="form">
+
+                    <mat-card-header>
+                      <mat-card-title>Login / Register</mat-card-title>
+                     
+                    </mat-card-header>
+                   
+                    <mat-card-content>
+                        <form [formGroup]="loginForm">
+                            <div class="input-container">
+                                <label>Cin</label>
+                                <input  class="login-form-txt" placeholder="Cin" formControlName="cin">
+                                <div *ngIf="cin && cin.invalid && cin.dirty"class="erreur">
+                                    *Cin est obligatoire max(8)
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <label>Nom</label>
+                                <input   class="login-form-txt"  placeholder="nom" formControlName="nom">
+                                
+                                <div *ngIf="nom && nom.invalid && nom.dirty"class="erreur">
+                                    *Nom est obligatoire
+                                </div>
+                            </div>
+
+                            <div class="input-container">
+                                <label>Prénom</label>
+                                <input   class="login-form-txt"  placeholder="prenom" formControlName="prenom">
+                                
+                                <div *ngIf="prenom && prenom.invalid && prenom.dirty"class="erreur">
+                                    *Prénom est obligatoire
+                                </div>
+                            </div>
+
+                            <div class="input-container">
+                                <label>Téléphone</label>
+                                <input   class="login-form-txt"  placeholder="tel" formControlName="tel">
+                                
+                                <div *ngIf="tel && tel.invalid && tel.dirty"class="erreur">
+                                    *Téléphone est obligatoire
+                                </div>
+                            </div>
+
+                            <div class="input-container">
+                                <label>Résidence</label>
+                                <input   class="login-form-txt"  placeholder="residence" formControlName="residence">
+                                
+                                <!-- <div *ngIf="residence && residence.invalid && residence.dirty"class="erreur">
+                                    *Prénom est obligatoire
+                                </div> -->
+                            </div>
+
+                            <div class="input-container">
+                                <label>Copropriété</label>
+                                <input   class="login-form-txt"  placeholder="copropriete" formControlName="copropriete">
+                                
+                                <div *ngIf="copropriete && copropriete.invalid && copropriete.dirty"class="erreur">
+                                    *Copropriété est obligatoire
+                                </div>
+                            </div>
+
+                            <div class="input-container">
+                                <label>Appartement</label>
+                                <input   class="login-form-txt"  placeholder="appartement" formControlName="appartement">
+                                
+                                <div *ngIf="appartement && appartement.invalid && appartement.dirty"class="erreur">
+                                    *appartement est obligatoire
+                                </div>
+                            </div>
+
+
+                            <div class="justify-content-center align-items-center d-flex">
+                                <button class="btn btn-warning rounded-pill"  (click)="reset()">Annuler</button>
+                                <button class="btn btn-primary rounded-pill" [mat-dialog-close]="true" [disabled]="loginForm.invalid" (click)="onAddProduct()">S'inscrire</button>
+                                
+                            </div> 
+                        </form>
+                        <mat-tab-group>
+                            <mat-tab> 
+                               
+                            </mat-tab>
+                        </mat-tab-group>
+                    </mat-card-content>
+
+                    
+                </mat-card>
+                  
+            </div>
+        </div>
+    </div>
+</div>
+
