@@ -1,9 +1,13 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Paiement } from 'src/app/classes/paiement';
 import { PaiementService } from 'src/app/services/paiement.service';
+import { DepensesComponent } from '../depenses/depenses.component';
+import { PaiementComponent } from '../paiement/paiement.component';
+import { ModifierHabitantComponent } from '../modifierhabitant/modifierhabitant.component';
 
 @Component({
   selector: 'app-listpaiement',
@@ -18,7 +22,8 @@ export class ListpaiementComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor(private paiementservice:PaiementService) { }
+  constructor(private paiementservice:PaiementService,
+    private dialog: MatDialog) { }
 
   ngOnInit(): void {
 
@@ -38,6 +43,24 @@ export class ListpaiementComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  openForm() {
+    const dialogRef = this.dialog.open(ModifierHabitantComponent,{
+      width: "30%"
+    });
+  }
+
+  openForm1() {
+    const dialogRef = this.dialog.open(PaiementComponent,{
+      width: "30%"
+    });
+  }
+
+  openForm2() {
+    const dialogRef = this.dialog.open(DepensesComponent,{
+      width: "30%"
+    });
   }
 }
 

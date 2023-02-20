@@ -1,3 +1,29 @@
+<nav class="navbar justify-content-end" style="background-color:rgb(56, 113, 177);height: 64px;">
+  <button class="btn btn-light rounded-pill mx-3" (click)="openForm()">
+    <i class="bi bi-plus-circle"></i> Ajouter Habitant
+  </button>
+  <button class="btn btn-light rounded-pill mx-3" (click)="openForm1()">
+    <i class="bi bi-plus-circle"></i> Ajouter Paiement
+  </button>
+  <button class="btn btn-light rounded-pill mx-3" (click)="openForm2()">
+    <i class="bi bi-plus-circle"></i> Ajouter Depense
+  </button>
+  <div class="mx-5" style="font-size: 20px;">
+    <i class="bi bi-person-circle"></i>
+  </div>
+</nav>
+
+<div class="wrapper">
+  <div class="sidebar">
+    <span><a mat-button routerLink="/listhabitant" class="fas">list habitant</a></span>
+      <span><a mat-button routerLink="/listpaiement" class="fas">list paiement</a></span>
+      <span><a mat-button routerLink="/listdepense" class="fas">list depenses</a></span>
+      <span><a mat-button routerLink="/setting" class="fas">paramètre du compte</a></span>
+      <span><a  mat-button routerLink="/home" class="fas"><i class="bi bi-box-arrow-right"></i>Déconnexion</a></span>
+    
+  </div>
+</div>
+
 <div class="conatiner">
     <div class="d-flex justify-content-center m-4">
         <h1>Public Profil & Account Setting</h1>
@@ -18,17 +44,17 @@
                                   
                                   <div>
                                       <label>Mail</label>
-                                      <input  class="setting-form-txt" placeholder="mail" formControlName="email" >
+                                      <input  class="setting-form-txt" placeholder="mail" formControlName="login" >
                                   </div>
                                   <div class="input-container">
                                       <label>Mot de passe</label>
-                                      <input [type]="hide ? 'password' : 'text'"  class="setting-form-txt" placeholder="mot de passe" formControlName="password" >
+                                      <input [type]="hide ? 'password' : 'text'"  class="setting-form-txt" placeholder="mot de passe" formControlName="pwd" >
                                       <span class="eyeIcon" (click)="hide = !hide">
-                                        <i [ngClass]="hide?'bi bi-eye-slash-fill':'bi bi-eye-fill'"></i>
+                                        <!-- <i [ngClass]="hide?'bi bi-eye-slash-fill':'bi bi-eye-fill'"></i> -->
                                       </span>
                                   </div>
                                   <mat-card-actions class="d-flex justify-content-center align-items-center">
-                                    <button mat-raised-button color="primary" class="button" [disabled]="settingForm.invalid">Continue</button>
+                                    <button mat-raised-button color="primary" class="button" [disabled]="settingForm.invalid" (click)="onUpdate()">Continue</button>
                                   </mat-card-actions>
                               </form>
                   </mat-card-content>

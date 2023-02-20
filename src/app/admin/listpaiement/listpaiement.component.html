@@ -1,3 +1,30 @@
+<nav class="navbar justify-content-end" style="background-color:rgb(56, 113, 177);height: 64px;">
+    <button class="btn btn-light rounded-pill mx-3" (click)="openForm()">
+        <i class="bi bi-plus-circle"></i> Ajouter Habitant
+    </button>
+    <button class="btn btn-light rounded-pill mx-3" (click)="openForm1()">
+        <i class="bi bi-plus-circle"></i> Ajouter Paiement
+    </button>
+    <button class="btn btn-light rounded-pill mx-3" (click)="openForm2()">
+        <i class="bi bi-plus-circle"></i> Ajouter Depense
+    </button>
+    <div class="mx-5" style="font-size: 20px;">
+        <i class="bi bi-person-circle"></i>
+    </div>
+</nav>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <span><a mat-button routerLink="/listhabitant" class="fas">list habitant</a></span>
+        <span><a mat-button routerLink="/listpaiement" class="fas">list paiement</a></span>
+        <span><a mat-button routerLink="/listdepense" class="fas">list depenses</a></span>
+        <span><a mat-button routerLink="/setting" class="fas">paramètre du compte</a></span>
+        <span><a mat-button routerLink="/home" class="fas"><i class="bi bi-box-arrow-right"></i>Déconnexion</a></span>
+
+    </div>
+</div>
+
+
 <div class="conatiner">
     <div class="d-flex justify-content-center m-4">
         <h1>List Paiement</h1>
@@ -6,9 +33,9 @@
         <mat-form-field>
             <mat-label>Chercher</mat-label>
             <input matInput (keyup)="applyFilter($event)" placeholder="habitant" #input>
-          </mat-form-field>
-          
-          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+        </mat-form-field>
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
 
             <!-- <ng-container matColumnDef="id">
@@ -48,9 +75,8 @@
             </tr>
 
         </table>
-        
-    
+
+
 
 
     </div>
-

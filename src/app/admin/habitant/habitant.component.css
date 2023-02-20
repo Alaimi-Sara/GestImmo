@@ -1,13 +1,13 @@
 h1{
-    font-family: 'Nunito';
-    font-size: 30px;
-    width: 21%;
-    padding-left: 15px;
-    border: 5px solid red;
-    border-top: 0px;
-    border-bottom: 0px;
-    border-right: 0px;
-    
+  font-family: 'Nunito';
+  font-size: 30px;
+  width: 21%;
+  padding-left: 10px;
+  border: 5px solid blue;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-right: 0px;
+  
 }
 table {
     width: 100%;
@@ -17,3 +17,68 @@ table {
     font-size: 14px;
     width: 100%;
   }
+
+
+  .con {
+    display: flex;
+    border: solid 1px black;
+  }
+  .con > :nth-child(2) {
+    margin-right: auto;
+  }
+  a {
+    padding: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+.ch{
+  padding-left: 160px;
+}
+
+
+
+
+  .wrapper{
+    display: flex;
+    position: relative;
+  }
+
+  .wrapper .sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background-color: rgb(210, 224, 224);
+    padding: 40px 0;
+  }
+  .wrapper .sidebar span{
+    padding: 15px;
+    /* border-bottom: 1px solid rgba(0, 0, 0,0,05);
+    border-top: 1px solid rgba(225,225,225,0,05); */
+  }
+
+.wrapper .sidebar span a{
+  color: #bdb8d7;
+  display: block;
+}
+
+.wrapper .sidebar span a .fas{
+  width: 25px;
+  
+}
+.wrapper .sidebar span:hover{
+  background-color: #7ab1be;
+}
+
+.wrapper .sidebar span a{
+  color:rgb(22, 25, 214);
+}
+

@@ -1,19 +1,32 @@
 <app-header></app-header>
 <div id="slider">
     <figure>
-        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height="500 px">
-        <img src="https://images.pexels.com/photos/792034/pexels-photo-792034.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height="500 px">
-        <img src="https://media.istockphoto.com/id/836251910/fr/photo/contrat-dachat-pour-house.jpg?b=1&s=612x612&w=0&k=20&c=jW63V1dU6egUJ7D8aun1Oy9zdlZp2Sp-zLXiYq8DGc8=" alt="" height="500 px">
-        <img src="http://e-syndic.tn/site/img/portfolio/8.jpg" alt="" height="500 px">
-        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height="500 px">
-        
+        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="" height="500 px">
+        <img src="https://images.pexels.com/photos/792034/pexels-photo-792034.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="" height="500 px">
+        <img src="https://media.istockphoto.com/id/836251910/fr/photo/contrat-dachat-pour-house.jpg?b=1&s=612x612&w=0&k=20&c=jW63V1dU6egUJ7D8aun1Oy9zdlZp2Sp-zLXiYq8DGc8="
+            alt="" height="500 px">
+            <img class="img1"src="../../../assets/img.png">
+        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="" height="500 px">
+
     </figure>
-    <button class="btn btn-light rounded-pill mx-3"  (click)="openForm()">
-        <i class="bi bi-plus-circle"></i> S'inscrire 
-    </button>
-   
-<app-footer></app-footer>
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-center flex-column align-items-start" style="height:300px; gap: 20px; ">
+                <!-- <span class="text-danger" style=" font-size: 20px; font-family: 'Nunito';">Our Special Dish</span> -->
+                <h1>GestImmo </h1>
+                <p class="text-muted">Optez pour GestImmo, et gérez vos paiements de cotisation ,épense, et toute autre tache
+                    <br>quotidienne de votre syndic depuis n'importe quel endroit au monde 
+                </p>
+                <a (click)="openForm()" class="btn btn-dark  rounded-pill px-4 py-2">Inscrire</a>
+            </div>
+            <div>
+                <img class="img1"src="../../../assets/img.png">
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+
 </div>
-
-
-

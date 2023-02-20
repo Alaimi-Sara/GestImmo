@@ -17,3 +17,43 @@ table {
     font-size: 14px;
     width: 100%;
   }
+
+  
+
+  .wrapper{
+    display: flex;
+    position: relative;
+  }
+
+  .wrapper .sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background-color: rgb(210, 224, 224);
+    padding: 40px 0;
+  }
+  .wrapper .sidebar span{
+    padding: 15px;
+    /* border-bottom: 1px solid rgba(0, 0, 0,0,05);
+    border-top: 1px solid rgba(225,225,225,0,05); */
+  }
+  .conatiner{
+    padding-left: 160px;
+  }
+
+.wrapper .sidebar span a{
+  color: #bdb8d7;
+  display: block;
+}
+
+.wrapper .sidebar span a .fas{
+  width: 25px;
+  
+}
+.wrapper .sidebar span:hover{
+  background-color: #7ab1be;
+}
+
+.wrapper .sidebar span a{
+  color:rgb(22, 25, 214);
+}

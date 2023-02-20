@@ -3,7 +3,7 @@ h1{
     font-size: 30px;
     width: 40%;
     padding-left: 15px;
-    border: 5px solid red;
+    border: 5px solid blue;
     border-top: 0px;
     border-bottom: 0px;
     border-right: 0px;
@@ -23,7 +23,7 @@ h1{
   padding-top: 50px;
   color: black;
   border-radius: 40px;
-  background-color:tomato;
+  background-color:rgb(45, 102, 177);
 }
 
 .button {
@@ -51,10 +51,10 @@ label{
   font-family: 'Nunito';
   font-size: 15px;
 }
-input.ng-valid{ border-left: 3px solid #ffc107;}
-input.ng-invalid{ border-left: 3px solid #dc3545;}
-textarea.ng-valid{ border-left: 3px solid #ffc107;}
-textarea.ng-invalid{ border-left: 3px solid #dc3545;}
+input.ng-valid{ border-left: 3px solid green;}
+input.ng-invalid{ border-left: 3px solid red;}
+/* textarea.ng-valid{ border-left: 3px solid #ffc107;}
+textarea.ng-invalid{ border-left: 3px solid #dc3545;} */
 .form{
   width: 500px;
   height: 420px;
@@ -66,10 +66,42 @@ textarea.ng-invalid{ border-left: 3px solid #dc3545;}
   position: relative;
   width: 180px;
 }
-.eyeIcon{
-  position: absolute;
-  right: 15px;
-  bottom: 30px;
-  font-size: 20px;
+
+.conatiner{
+  padding-left: 160px;
 }
+
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar{
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background-color: rgb(210, 224, 224);
+  padding: 40px 0;
+}
+.wrapper .sidebar span{
+  padding: 15px;
+}
+
+.wrapper .sidebar span a{
+color: #bdb8d7;
+display: block;
+}
+
+.wrapper .sidebar span a .fas{
+width: 25px;
+
+}
+.wrapper .sidebar span:hover{
+background-color: #7ab1be;
+}
+
+.wrapper .sidebar span a{
+color:rgb(22, 25, 214);
+}
+
 

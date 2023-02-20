@@ -1,48 +1,73 @@
+<nav class="navbar justify-content-end" style="background-color:rgb(56, 113, 177);height: 64px;">
+    <button class="btn btn-light rounded-pill mx-3" (click)="openForm()">
+        <i class="bi bi-plus-circle"></i> Ajouter Habitant
+    </button>
+    <button class="btn btn-light rounded-pill mx-3" (click)="openForm1()">
+        <i class="bi bi-plus-circle"></i> Ajouter Paiement
+    </button>
+    <button class="btn btn-light rounded-pill mx-3" (click)="openForm2()">
+        <i class="bi bi-plus-circle"></i> Ajouter Depense
+    </button>
+    <div class="mx-5" style="font-size: 20px;">
+        <i class="bi bi-person-circle"></i>
+    </div>
+</nav>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <span><a mat-button routerLink="/listhabitant" class="fas">list habitant</a></span>
+        <span><a mat-button routerLink="/listpaiement" class="fas">list paiement</a></span>
+        <span><a mat-button routerLink="/listdepense" class="fas">list depenses</a></span>
+        <span><a mat-button routerLink="/setting" class="fas">paramètre du compte</a></span>
+        <span><a mat-button routerLink="/home" class="fas"><i class="bi bi-box-arrow-right"></i>Déconnexion</a></span>
+
+    </div>
+</div>
+
 <div class="container">
     <div class="d-flex justify-content-center m-4">
-        <h2>List Depenses</h2>
+        <h1>List Depenses</h1>
     </div>
     <div>
         <mat-form-field>
             <mat-label>Chercher</mat-label>
             <input matInput (keyup)="applyFilter($event)" placeholder="Depenses" #input>
-          </mat-form-field>
+        </mat-form-field>
         <div class="mat-elevation-z8">
-           
-            <table mat-table [dataSource]="dataSource" matSort >
-                    
-                        <!-- Name Column -->
-                        <ng-container matColumnDef="type">
-                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
-                            <td mat-cell *matCellDef="let row"> {{row.type}}</td>
-                        </ng-container>
-                    
-                        <!-- Type Column -->
-                        <ng-container matColumnDef="montant">
-                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Montant </th>
-                            <td mat-cell *matCellDef="let row"> {{row.montant}} </td>
-                        </ng-container>
-                        
 
-                        <ng-container matColumnDef="action">
-                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
-                            <td mat-cell *matCellDef="let row"> 
-                                <button mat-icon-button color="primary" (click)="onEditProduct(row)">
-                                    <mat-icon>edit</mat-icon>
-                                </button>
-                                <button mat-icon-button (click)="onDeleteProduct(row.id)" color="warn">
-                                    <mat-icon>delete</mat-icon>
-                                </button>
-                            </td>
-                        </ng-container>
-                        
-                    
-                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            <table mat-table [dataSource]="dataSource" matSort>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="type">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
+                    <td mat-cell *matCellDef="let row"> {{row.type}}</td>
+                </ng-container>
+
+                <!-- Type Column -->
+                <ng-container matColumnDef="montant">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Montant </th>
+                    <td mat-cell *matCellDef="let row"> {{row.montant}} </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+                    <td mat-cell *matCellDef="let row">
+                        <button mat-icon-button color="primary" (click)="onEditProduct(row)">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button (click)="onDeleteProduct(row.id)" color="warn">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
-          
+
             <mat-paginator [pageSizeOptions]="[4, 8, 16, 50]" aria-label="Select page of users"></mat-paginator>
-        </div>          
+        </div>
     </div>
 </div>
-

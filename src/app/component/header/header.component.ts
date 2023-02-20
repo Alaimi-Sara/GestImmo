@@ -3,6 +3,7 @@ import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { UserService } from 'src/app/services/user.service';
 import { DepensesComponent } from 'src/app/admin/depenses/depenses.component';
 import { ModifierHabitantComponent } from 'src/app/admin/modifierhabitant/modifierhabitant.component';
+import { InscrireComponent } from '../inscrire/inscrire.component';
 
 @Component({
   selector: 'app-header',
@@ -18,13 +19,9 @@ export class HeaderComponent implements OnInit {
   }
 
   openForm() {
-    const dialogRef = this.dialog.open(ModifierHabitantComponent,{
+    const dialogRef = this.dialog.open(InscrireComponent,{
       width: "30%"
     });
   }
-  openForm1() {
-    const dialogRef = this.dialog.open(DepensesComponent,{
-      width: "30%"
-    });
-  }
+
 }

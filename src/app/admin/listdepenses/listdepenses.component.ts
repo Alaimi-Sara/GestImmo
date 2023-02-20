@@ -6,6 +6,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Depenses } from 'src/app/classes/depenses';
 import { DepensesService } from 'src/app/services/depenses.service';
 import { DepensesComponent } from '../depenses/depenses.component';
+import { PaiementComponent } from '../paiement/paiement.component';
+import { ModifierHabitantComponent } from '../modifierhabitant/modifierhabitant.component';
 
 @Component({
   selector: 'app-listdepenses',
@@ -55,6 +57,24 @@ applyFilter(event: Event) {
   if (this.dataSource.paginator) {
     this.dataSource.paginator.firstPage();
   }
+}
+
+openForm() {
+  const dialogRef = this.dialog.open(ModifierHabitantComponent,{
+    width: "30%"
+  });
+}
+
+openForm1() {
+  const dialogRef = this.dialog.open(PaiementComponent,{
+    width: "30%"
+  });
+}
+
+openForm2() {
+  const dialogRef = this.dialog.open(DepensesComponent,{
+    width: "30%"
+  });
 }
 
 }

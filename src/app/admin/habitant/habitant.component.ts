@@ -8,6 +8,8 @@ import { HabitantService } from 'src/app/services/habitant.service';
 import { ModifierHabitantComponent } from '../modifierhabitant/modifierhabitant.component';
 import { PaiementComponent } from '../paiement/paiement.component';
 import { DepensesComponent } from '../depenses/depenses.component';
+import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -25,6 +27,7 @@ export class HabitantComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
   constructor(private habitantservice : HabitantService,
     private dialog: MatDialog,
+    private userservice:UserService, private router:Router
     // @Inject(MAT_DIALOG_DATA) public editData: any,
     ) { }
 
@@ -36,6 +39,11 @@ export class HabitantComponent implements OnInit {
        this.dataSource.paginator = this.paginator;
        this.dataSource.sort = this.sort;}
     )
+  }
+
+  logout () {
+    this.userservice.user = undefined;
+    this.router.navigate(['login']);
   }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

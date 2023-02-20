@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { User } from 'src/app/classes/user';
 import { UserService } from 'src/app/services/user.service';
+import { PaiementComponent } from '../paiement/paiement.component';
+import { ModifierHabitantComponent } from '../modifierhabitant/modifierhabitant.component';
+import { DepensesComponent } from '../depenses/depenses.component';
 
 @Component({
   selector: 'app-setting',
@@ -13,13 +17,14 @@ export class SettingComponent implements OnInit {
   hide: boolean = true;
   user: User | undefined = this.userservice.user
 
-  constructor(private userservice:UserService, private fb:FormBuilder) { }
+  constructor(private userservice:UserService, private fb:FormBuilder,
+    private dialog:MatDialog) { }
 
   ngOnInit(): void {
     const user = this.userservice.user
     this.settingForm = this.fb.nonNullable.group({
-      email: [user?.login, Validators.required],
-      password : [user?.pwd, Validators.required],
+      login: [user?.login, Validators.required],
+      pwd : [user?.pwd, Validators.required],
       role: [user?.role]
     })
   }
@@ -30,5 +35,24 @@ export class SettingComponent implements OnInit {
         alert("Modifié avec succes!");
       })
     }
+    
+  }
+
+  openForm() {
+    const dialogRef = this.dialog.open(ModifierHabitantComponent,{
+      width: "30%"
+    });
+  }
+
+  openForm1() {
+    const dialogRef = this.dialog.open(PaiementComponent,{
+      width: "30%"
+    });
+  }
+
+  openForm2() {
+    const dialogRef = this.dialog.open(DepensesComponent,{
+      width: "30%"
+    });
   }
 }
